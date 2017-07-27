@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body ng-app="AngularTest">
+    <div ng-controller="Controller">
+      <label>Filter | Display only patients older than</label>
+      <input type="text" type="number" ng-model="age" placeholder="...years">
+      <hr>
+      <table>
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

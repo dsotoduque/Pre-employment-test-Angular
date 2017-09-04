@@ -7,7 +7,7 @@
   <body ng-app="AngularTest">
     <div ng-controller="Controller">
       <label>Filter | Display only patients older than</label>
-      <input type="text" type="number" ng-model="age" placeholder="...years">
+      <input type="text" type="number" ng-model="age" placeholder="...years" ng-model="filerValue">
       <hr>
       <table>
         <thead>
@@ -19,6 +19,12 @@
         </tr>
         </thead>
         <tbody>
+         <tr ng-repeat="patient in patients | filter:greaterThan('age',filerValue)">
+          <td>{{patient.id}}<td>
+          <td>{{patient.name}}<td>
+          <td>{{patient.phone}}<td>
+          <td>{{patient.age}}<td>
+         </tr>
         </tbody>
       </table>
     </div>
